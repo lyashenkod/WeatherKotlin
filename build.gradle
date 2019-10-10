@@ -22,7 +22,22 @@ buildscript {
     }
 }
 
+apply from: 'versioning.gradle'
+
 allprojects {
+    def versionMajor = 0
+    def versionMinor = 0
+    def versionPatch = 1
+
+    ext {
+        androidCompileSdkVersion = 28
+        androidVersionCode = versionMajor * 10000 + versionMinor * 1000 + getVersionCodeFromGit()
+        androidVersionName = "${versionMajor}.${versionMinor}.${versionPatch}"
+        androidMinSdkVersion = 19
+        androidTargetSdkVersion = 28
+    }
+
+
     repositories {
         google()
         jcenter()

@@ -1,0 +1,32 @@
+ext.getVersionCodeFromGit = { ->
+    def currentBranch = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', "rev-parse", "--abbrev-ref", "HEAD"
+        standardOutput = currentBranch
+    }
+
+    def codeVersion = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', "rev-list", "--count", currentBranch.toString().trim()
+        standardOutput = codeVersion
+    }
+    return codeVersion.toString().toInteger()
+
+
+    def getVersionName = { ->
+        try {
+            def stdout = new ByteArrayOutputStream()
+            exec {
+                commandLine 'git', 'describe', '--tags', '--dirty'
+                standardOutput = stdout
+            }
+            return stdout.toString().trim()
+        }
+        catch (ignored) {
+            return null;
+        }
+    }
+
+
+
+}
