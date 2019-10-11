@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "347847446941",
+    "firebase_url": "https://weatherkotlin-5d0a2.firebaseio.com",
+    "project_id": "weatherkotlin-5d0a2",
+    "storage_bucket": "weatherkotlin-5d0a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347847446941:android:d6c585b61df4de3a88df74",
+        "android_client_info": {
+          "package_name": "com.lyashenkod.weather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347847446941-886ch9gqqhc6bq4veg912d43ts0cgej5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7Te73S-gggNnJH7snIN0Et8xrAP0zouc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347847446941-886ch9gqqhc6bq4veg912d43ts0cgej5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
